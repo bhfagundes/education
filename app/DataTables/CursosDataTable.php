@@ -65,7 +65,8 @@ class CursosDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            
+            'nome',
+            'codigo'
         ];
     }
 

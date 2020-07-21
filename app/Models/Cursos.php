@@ -7,19 +7,25 @@ use Eloquent as Model;
 /**
  * Class Cursos
  * @package App\Models
- * @version July 21, 2020, 3:57 am UTC
+ * @version July 21, 2020, 4:14 am UTC
  *
+ * @property string $nome
+ * @property string $codigo
  */
 class Cursos extends Model
 {
 
     public $table = 'cursos';
     
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
 
 
 
     public $fillable = [
-        
+        'nome',
+        'codigo'
     ];
 
     /**
@@ -28,7 +34,9 @@ class Cursos extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer'
+        'id' => 'integer',
+        'nome' => 'string',
+        'codigo' => 'string'
     ];
 
     /**
@@ -37,7 +45,8 @@ class Cursos extends Model
      * @var array
      */
     public static $rules = [
-        
+        'nome' => 'required',
+        'codigo' => 'required'
     ];
 
     

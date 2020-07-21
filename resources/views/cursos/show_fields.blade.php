@@ -1,12 +1,12 @@
-<!-- Created At Field -->
+<!-- Nome Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{{ $cursos->created_at }}</p>
+    {!! Form::label('nome', 'Nome:') !!}
+    <p>{{ $cursos->nome }}</p>
 </div>
 
-<!-- Updated At Field -->
+<!-- Codigo Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{{ $cursos->updated_at }}</p>
+    {!! Form::label('codigo', 'Codigo:') !!}
+    <p>{{ $cursos->codigo }}</p>
 </div>
 

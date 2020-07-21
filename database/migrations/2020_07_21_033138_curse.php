@@ -29,6 +29,6 @@ class Curse extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('cursos');
     }
 }
