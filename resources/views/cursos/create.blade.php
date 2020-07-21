@@ -20,7 +20,7 @@
                             <div class="card-body">
                                 {!! Form::open(['route' => 'cursos.store','files'=>true]) !!}
 
-                                   @include('cursos.fields')
+                                   @include('cursos.fields_import')
 
                                 {!! Form::close() !!}
                             </div>
