@@ -10,6 +10,8 @@ use App\Repositories\CursosRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use Mtownsend\XmlToArray\XmlToArray;
+use App\Models\Cursos;
 
 class CursosController extends AppBaseController
 {
@@ -52,9 +54,12 @@ class CursosController extends AppBaseController
     public function store(CreateCursosRequest $request)
     {
         $input = $request->all();
-
-        $cursos = $this->cursosRepository->create($input);
-
+        $path = $request->file('arquivo')->getRealPath();
+        $data = file_get_contents($path);
+        $cursosConverted = XmlToArray::convert($data);
+        $cursos = $cursosConverted['curso'];
+        Cursos::insert($cursos);
+       
         Flash::success('Cursos saved successfully.');
 
         return redirect(route('cursos.index'));

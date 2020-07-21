@@ -7,7 +7,7 @@ use Eloquent as Model;
 /**
  * Class Cursos
  * @package App\Models
- * @version July 21, 2020, 4:14 am UTC
+ * @version July 21, 2020, 4:45 am UTC
  *
  * @property string $nome
  * @property string $codigo
@@ -36,7 +36,7 @@ class Cursos extends Model
     protected $casts = [
         'id' => 'integer',
         'nome' => 'string',
-        'codigo' => 'string'
+        'codigo' => 'integer'
     ];
 
     /**
@@ -45,8 +45,7 @@ class Cursos extends Model
      * @var array
      */
     public static $rules = [
-        'nome' => 'required',
-        'codigo' => 'required'
+      
     ];
 
     

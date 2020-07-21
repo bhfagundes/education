@@ -18,7 +18,7 @@
                                 <strong>Create Cursos</strong>
                             </div>
                             <div class="card-body">
-                                {!! Form::open(['route' => 'cursos.store']) !!}
+                                {!! Form::open(['route' => 'cursos.store','files'=>true]) !!}
 
                                    @include('cursos.fields')
 
